@@ -1,0 +1,231 @@
+@import 'vars';
+@import 'mixin';
+
+.products {
+  height: 50vw;
+  &-inner {
+    padding-top: 8vw;
+    width: inherit;
+    @include display(flex, column, center, center);
+
+    &-upper {
+      &_block {
+        @include display(flex, column, center, center);
+        text-align: center;
+      }
+      &_line {
+        width: 4vw;
+        height: .1vw;
+        background: $color3;
+      }
+    }
+    &-below {
+      &_block {
+        width: inherit;
+        margin-top: 5vw;
+        @include grid(grid, 4, space-between);
+      }
+      &_content {
+        @include display(flex, column, center, center);
+        width: 18.5vw;
+      }
+      &_border {
+        position: relative;
+        width: inherit;
+        z-index: 100;
+        & img {
+          width: inherit;
+        }
+        & span {
+          position: absolute;
+          top: .5vw;
+          right: .5vw;
+          padding: .2vw 1vw;
+          background: $color1;
+          @include font($font1, 1.1vw, 600, white, uppercase);
+        }
+      }
+      &_suborder {
+        padding-left: 1.5vw;
+        padding-top: 1.5vw;
+        width: inherit;
+        background: white;
+        height: 9vw;
+        border-radius: 10px;
+        position: relative;
+        bottom: 1vw;
+      }
+      &-suborder_text {
+        @include font($font1, 1.1vw, 600, $color5, capitalize);
+        margin: .8vw 0;
+      }
+      &_subcontent {
+        @include display(flex, row, unset, center);
+        &:first-child {
+          margin-top: .5vw;
+        }
+        & span {
+          margin-right: 1vw;
+          i {
+            color: $color4;
+            font-size: .9vw;
+          }
+        }
+        & p {
+          @include font($font1, 1.1vw, 400, $color3, capitalize);
+        }
+      }
+      &_price {
+        margin-right: 1vw;
+        @include font($font1, 1vw, 600, $color3, capitalize);
+        border-bottom: solid 1px;
+        &:last-child {
+          color: $color1;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  &_title {
+    @include font($font3, 2vw, 600, $color5, capitalize);
+    margin-bottom: .5vw;
+  }
+  &_subtitle {
+    @include font($font2, 1.4vw, 400, $color3, unset);
+    margin-bottom: 1.5vw;
+  }
+}
+
+.features {
+  height: 55vw;
+}
+
+@media (max-width: 780px) {
+  .products {
+    height: 125vw;
+    &_title {
+      font-size: 3vw;
+    }
+    &_subtitle {
+      font-size: 2vw;
+      margin-bottom: 2.5vw;
+    }
+    &-inner-upper_line {
+      width: 5vw;
+      height: .3vw;
+    }
+    &-inner-below {
+      &_block {
+        @include grid(grid, 2, space-between);
+        width: 72vw;
+      }
+      &_content {
+        width: 34.5vw;
+        &:first-of-type {
+          margin-bottom: 3vw;
+        }
+        &:nth-of-type(2) {
+          margin-bottom: 3vw;
+        }
+      }
+      &_border span {
+        font-size: 2vw;
+        top: 1vw;
+        right: 1vw;
+        padding: 0.5vw 1.6vw;
+      }
+      &_suborder {
+        height: 15vw;
+      }
+      &-suborder_text {
+        font-size: 2.3vw;
+        margin: 1.5vw 0;
+      }
+      &_subcontent span i {
+        font-size: 1.9vw;
+      }
+      &_subcontent p {
+        font-size: 2.1vw;
+      }
+      &_price {
+        font-size: 2.2vw;
+      }
+    }
+  }
+  .features {
+    height: 130vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .products-inner-upper_line {
+    height: .4vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .products {
+    height: 365vw;
+    &-inner-below {
+      &_block {
+        grid-template-columns: auto;
+        justify-content: center;
+        margin-top: 7vw;
+      }
+      &_content {
+        width: 53.5vw;
+        margin-bottom: 5vw;
+        &:first-of-type,
+        &:nth-of-type(2) {
+          margin-top: 0vw;
+          margin-bottom: 10vw;
+        }
+        &:last-of-type {
+          margin-top: 5vw;
+        }
+      }
+      &_border span {
+        top: 1.8vw;
+        right: 1.8vw;
+        font-size: 2.8vw;
+        padding: .9vw 2.5vw;
+      }
+      &_suborder {
+        height: 25vw;
+        padding-left: 3.5vw;
+      }
+      &_subcontent {
+        &:first-of-type {
+          margin-top: 1.5vw;
+        }
+        & span i {
+          font-size: 2.7vw;
+        }
+        & p {
+          font-size: 3.4vw;
+        }
+      }
+      &-suborder_text {
+        font-size: 3.4vw;
+        margin: 3vw 0;
+      }
+      &_price {
+        font-size: 3.3vw;
+        margin-right: 3vw;
+      }
+    }
+    &-inner-upper_line {
+      margin-top: 2vw;
+      width: 8vw;
+    }
+    &_title {
+      font-size: 4vw;
+    }
+    &_subtitle {
+      font-size: 2.65vw;
+    }
+  }
+  .features {
+    height: 375vw;
+  }
+}

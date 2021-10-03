@@ -1,0 +1,71 @@
+@import 'vars';
+@import 'mixin';
+.intro {
+  width: 100%;
+  padding-top: 4.7vw;
+  margin: 0 auto;
+  &-background {
+    position: relative;
+    background-color: $color6;
+    height: 41vw;
+    &_img {
+      position: absolute;
+      right: 0;
+      width: 45vw;
+      height: 41vw;
+      & img:first-child {
+        width: 45vw;
+        position: absolute;
+        right: 0;
+        top: 2vw;
+      }
+      & img:last-child {
+        width: 38vw;
+        position: absolute;
+        right: 2vw;
+        top: 12vw;
+      }
+    } 
+    &-img_shape {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      height: inherit;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+  &-inner {
+    @include display(flex, column, center, flex-start);
+    height: 47vw;
+    &_block {
+      width: 55%
+    }
+    &_text {
+      @include font($font3, 4.1vw, 700, $color2, capitalize);
+      line-height: 1.2
+    }
+    &_paragraph {
+      @include font($font1, 1.199vw, 400, $color5, unset);
+      margin: 3.5vw 0;
+      padding-right: 5vw;
+      line-height: 1.5;
+    }
+    & span {
+      text-transform: lowercase;
+    }
+    &_button {
+      @include font($font3, 1.7vw, 700, white, uppercase);
+      padding: .1vw 2vw;
+      background: $color1;
+      @include border(5px);
+      cursor: pointer;
+      @include transition(.3s, background);
+      &:hover {
+        @include transition(.3s, background);
+        background: transparent;
+        color: $color1;
+      }
+    }
+  }
+}

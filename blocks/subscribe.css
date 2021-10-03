@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+.subscribe {
+  height: 35vw;
+}
+
+.subscribe-inner-below_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vw;
+  width: 48vw;
+  height: 4vw;
+  position: relative;
+}
+
+.subscribe-inner-below_hover {
+  position: absolute;
+  height: inherit;
+  cursor: pointer;
+}
+
+.subscribe-inner-below_hover:first-of-type {
+  width: 80%;
+  left: 0;
+  z-index: 100;
+}
+
+.subscribe-inner-below_hover:first-of-type:hover ~ .first > div {
+  background: black;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.subscribe-inner-below_hover:first-of-type:hover ~ .second > div {
+  background: #a3a3a3;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.subscribe-inner-below_hover:nth-of-type(2) {
+  width: 20%;
+  right: 0;
+  z-index: 100;
+}
+
+.subscribe-inner-below_hover:nth-of-type(2):hover ~ .first > div {
+  background: black;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.subscribe-inner-below_hover:nth-of-type(2):hover ~ .second > div {
+  background: #a3a3a3;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.subscribe-inner-below_border {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.subscribe-inner-below_border > div {
+  position: absolute;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  height: inherit;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.subscribe-inner-below_border:nth-of-type(3) {
+  width: 80%;
+}
+
+.subscribe-inner-below_border:nth-of-type(3):hover > div {
+  background: black;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.subscribe-inner-below_border:last-child {
+  width: 20%;
+}
+
+.subscribe-inner-below_border:last-child:hover > div {
+  background: #a3a3a3;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.subscribe-inner-below_leftside {
+  width: 120%;
+  background: #a3a3a3;
+  left: 0;
+}
+
+.subscribe-inner-below_rightside {
+  width: 120%;
+  background: black;
+  right: 0;
+  text-align: center;
+  padding-left: 1.8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media (max-width: 650px) {
+  .subscribe {
+    height: 30vw;
+  }
+  .subscribe .products-inner {
+    padding-top: 4vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .subscribe {
+    height: 40vw;
+  }
+  .subscribe-inner-below_block {
+    width: 65vw;
+    height: 5vw;
+  }
+  .subscribe-inner-below_rightside {
+    font-size: 1.3vw;
+  }
+}

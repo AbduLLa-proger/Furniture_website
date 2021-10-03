@@ -5,42 +5,138 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="blocks/style.css"/>
   <title>Document</title>
 </head>
 
 <body>
   <!-- HEADER -->
 
-  <section class="header">
+  <header class="header">
     <div class="container">
       <div class="header-inner">
         <div class="header-inner_block">
           <i class="fas fa-bars"></i>
           <p class="header-text">category</p>
           <i class="fas fa-arrow-circle-down"></i>
+          <div class="bars">
+            <div class="bars-container">
+              <span>
+                <i class="bars-style" data-id="0"></i>
+                <p class="bars-text">home</p>
+                <i class="fas fa-chevron-right" id="chevron-right"></i>
+                <div class="bars-burger">
+                  <p>here</p>
+                  <p>here</p>
+                  <p>here</p>
+                  <p>here</p>
+                </div>
+              </span>
+            </div>
+
+            <div class="bars-container">
+              <span>
+                <i class="bars-style" data-id="1"></i>
+                <p class="bars-text">featured</p>
+                <i class="fas fa-chevron-right" id="chevron-right"></i>
+                <div class="bars-burger">
+                  <p>here</p>
+                  <p>here</p>
+                  <p>here</p>
+                  <p>here</p>
+                </div>
+              </span>
+            </div>
+
+            <div class="bars-container">
+              <span>
+                <i class="bars-style" data-id="2"></i>
+                <p class="bars-text">shop</p>
+                <i class="fas fa-chevron-right" id="chevron-right"></i>
+                <div class="bars-burger">
+                  <p>here</p>
+                  <p>here</p>
+                  <p>here</p>
+                  <p>here</p>
+                </div>
+              </span>
+            </div>
+
+            <div class="bars-container">
+              <span>
+                <i class="bars-style" data-id="3"></i>
+                <p class="bars-text">blog</p>
+                <i class="fas fa-chevron-right" id="chevron-right"></i>
+                <div class="bars-burger">
+                  <p>here</p>
+                  <p>here</p>
+                  <p>here</p>
+                  <p>here</p>
+                </div>
+              </span>
+            </div>
+
+            <span>
+              <p class="bars-text">about</p>
+            </span>
+
+            <span>
+              <p class="bars-text">contact</p>
+            </span>
+
+          </div>
         </div>
         <div class="header-inner_block">
           <span>
+            <i class="burger-style" data-id="0"></i>
             <p class="header-text">home</p>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-down" id="chevron-down"></i>
+            <div class="burger burger-hide">
+              <p>here</p>
+              <p>here</p>
+              <p>here</p>
+              <p>here</p>
+            </div>
           </span>
           <span>
+            <i class="burger-style" data-id="1"></i>
             <p class="header-text">featured</p>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-down" id="chevron-down"></i>
+            <div class="burger burger-hide">
+              <p>here</p>
+              <p>here</p>
+              <p>here</p>
+              <p>here</p>
+            </div>
           </span>
           <span>
+            <i class="burger-style" data-id="2"></i>
             <p class="header-text">shop</p>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-down" id="chevron-down"></i>
+            <div class="burger burger-hide">
+              <p>here</p>
+              <p>here</p>
+              <p>here</p>
+              <p>here</p>
+            </div>
           </span>
           <span>
+            <i class="burger-style" data-id="3"></i>
             <p class="header-text">blog</p>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-down" id="chevron-down"></i>
+            <div class="burger burger-hide">
+              <p>here</p>
+              <p>here</p>
+              <p>here</p>
+              <p>here</p>
+            </div>
           </span>
           <span>
+            <i class="burger-style" data-id="4"></i>
             <p class="header-text">about</p>
           </span>
           <span>
+            <i class="burger-style" data-id="5"></i>
             <p class="header-text">contact</p>
           </span>
         </div>
@@ -50,25 +146,28 @@
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
   <!-- HEADER -->
 
   <!-- INTRO -->
 
   <section class="intro">
-    <div class="container">
-      <div class="intro-inner">
-        <div class="intro-inner_block">
-          <h1 class="intro-inner_text">best design span <span>of</span> furniture collection</h1>
-          <p class="intro-inner_paragraph">Improve the atmosphere through interior design that driven by
-            purposes to brings value into your environment.
-          </p>
-          <button class="intro-inner_button">shop now</button>
+    <div class="intro-background">
+      <div class="intro-background_img">
+        <div class="intro-background-img_shape">
+          <img src="images/intro-shape.png" alt="" />
+          <img src="images/img1.png" alt="" />
         </div>
-        <div class="intro-inner_block">
-          <div class="intro-inner_shape">
-            <img src="" alt="" class="intro-inner_img">
+      </div>
+      <div class="container">
+        <div class="intro-inner">
+          <div class="intro-inner_block">
+            <h1 class="intro-inner_text">best design <span class="text-unset">of</span> furniture collection</h1>
+            <p class="intro-inner_paragraph">Improve the atmosphere through interior design that driven by
+              purposes to brings value into your environment.
+            </p>
+            <button class="intro-inner_button">shop now</button>
           </div>
         </div>
       </div>
@@ -83,31 +182,34 @@
     <div class="container">
       <div class="products-inner">
         <div class="products-inner-upper_block">
-          <h2 class="products_title"></h2>
-          <p class="products_subtitle"></p>
+          <h2 class="products_title">top new products</h2>
+          <p class="products_subtitle">Praesent ut ligula non mi curabitur at lacus elit</p>
           <span class="products-inner-upper_line"></span>
         </div>
 
         <div class="products-inner-below_block">
+
           <div class="products-inner-below_content">
             <div class="products-inner-below_border">
-              <img src="" alt="" class="products-inner-below_img" />
+              <img src="images/img2.png" alt="" class="products-inner-below_img" />
               <span>sale</span>
             </div>
 
             <div class="products-inner-below_suborder">
               <div class="products-inner-below_subcontent">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <p>( reviews )</p>
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <p>(0 reviews )</p>
               </div>
               <p class="products-inner-below-suborder_text">decor for drowing</p>
               <div class="products-inner-below_subcontent">
-                <div class="pproducts-inner-below_price">$50.00</div>
-                <div class="pproducts-inner-below_price">$35.00</div>
+                <div class="products-inner-below_price">$50.00</div>
+                <div class="products-inner-below_price">$35.00</div>
               </div>
             </div>
           </div>
@@ -115,66 +217,72 @@
 
           <div class="products-inner-below_content">
             <div class="products-inner-below_border">
-              <img src="" alt="" class="products-inner-below_img" />
+              <img src="images/img3.png" alt="" class="products-inner-below_img" />
               <span>sale</span>
             </div>
             <div class="products-inner-below_suborder">
               <div class="products-inner-below_subcontent">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <p>( reviews )</p>
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <p>(0 reviews )</p>
               </div>
               <p class="products-inner-below-suborder_text">decor for drowing</p>
               <div class="products-inner-below_subcontent">
-                <div class="pproducts-inner-below_price">$50.00</div>
-                <div class="pproducts-inner-below_price">$35.00</div>
+                <div class="products-inner-below_price">$50.00</div>
+                <div class="products-inner-below_price">$35.00</div>
               </div>
             </div>
           </div>
 
           <div class="products-inner-below_content">
             <div class="products-inner-below_border">
-              <img src="" alt="" class="products-inner-below_img" />
+              <img src="images/img4.png" alt="" class="products-inner-below_img" />
               <span>sale</span>
             </div>
             <div class="products-inner-below_suborder">
               <div class="products-inner-below_subcontent">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <p>( reviews )</p>
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <p>(0 reviews )</p>
               </div>
               <p class="products-inner-below-suborder_text">decor for drowing</p>
               <div class="products-inner-below_subcontent">
-                <div class="pproducts-inner-below_price">$50.00</div>
-                <div class="pproducts-inner-below_price">$35.00</div>
+                <div class="products-inner-below_price">$50.00</div>
+                <div class="products-inner-below_price">$35.00</div>
               </div>
             </div>
           </div>
 
           <div class="products-inner-below_content">
             <div class="products-inner-below_border">
-              <img src="" alt="" class="products-inner-below_img" />
+              <img src="images/img5.png" alt="" class="products-inner-below_img" />
               <span>sale</span>
             </div>
             <div class="products-inner-below_suborder">
               <div class="products-inner-below_subcontent">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <p>( reviews )</p>
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <p>(0 reviews )</p>
               </div>
               <p class="products-inner-below-suborder_text">decor for drowing</p>
               <div class="products-inner-below_subcontent">
-                <div class="pproducts-inner-below_price">$50.00</div>
-                <div class="pproducts-inner-below_price">$35.00</div>
+                <div class="products-inner-below_price">$50.00</div>
+                <div class="products-inner-below_price">$35.00</div>
               </div>
             </div>
           </div>
@@ -183,7 +291,380 @@
     </div>
   </section>
 
+  <!-- PRODUCTS -->
 
+  <!-- IMAGES -->
+
+  <section class="images">
+    <div class="container">
+      <div class="images-inner">
+        <div class="images-inner_block">
+          <div class="images-inner-block_large">
+            <img class="large" src="images/img9.png" alt="">
+          </div>
+          <div class="images-inner-block_multiple">
+            <img class="small" src="images/img10.png" alt="">
+            <img class="small" src="images/img11.png" alt="">
+          </div>
+        </div>
+        <div class="images-inner_block">
+          <div class="images-inner-block_multiple">
+            <img class="small" src="images/img7.png" alt="">
+            <img class="small" src="images/img8.png" alt="">
+          </div>
+          <div class="images-inner-block_large">
+            <img class="large" src="images/img6.png" alt="">
+            <p>catagory name</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGES -->
+
+  <!-- FEATURES -->
+
+  <section class="products features">
+    <div class="container">
+      <div class="products-inner">
+        <div class="products-inner-upper_block">
+          <h2 class="products_title">featured deals</h2>
+          <p class="products_subtitle">Praesent ut ligula non mi curabitur at lacus elit</p>
+          <span class="products-inner-upper_line"></span>
+        </div>
+
+        <div class="products-inner-below_block">
+          <div class="products-inner-below_content">
+            <div class="products-inner-below_border">
+              <img src="images/img12.png" alt="" class="products-inner-below_img" />
+            </div>
+
+            <div class="products-inner-below_suborder">
+              <div class="products-inner-below_subcontent">
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <p>(0 reviews )</p>
+              </div>
+              <p class="products-inner-below-suborder_text">decor for drowing</p>
+              <div class="products-inner-below_subcontent">
+                <div class="products-inner-below_price">$50.00</div>
+                <div class="products-inner-below_price">$35.00</div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="products-inner-below_content">
+            <div class="products-inner-below_border">
+              <img src="images/img13.png" alt="" class="products-inner-below_img" />
+            </div>
+            <div class="products-inner-below_suborder">
+              <div class="products-inner-below_subcontent">
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <p>(0 reviews )</p>
+              </div>
+              <p class="products-inner-below-suborder_text">decor for drowing</p>
+              <div class="products-inner-below_subcontent">
+                <div class="products-inner-below_price">$50.00</div>
+                <div class="products-inner-below_price">$35.00</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="products-inner-below_content">
+            <div class="products-inner-below_border">
+              <img src="images/img14.png" alt="" class="products-inner-below_img" />
+            </div>
+            <div class="products-inner-below_suborder">
+              <div class="products-inner-below_subcontent">
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <p>(0 reviews )</p>
+              </div>
+              <p class="products-inner-below-suborder_text">decor for drowing</p>
+              <div class="products-inner-below_subcontent">
+                <div class="products-inner-below_price">$50.00</div>
+                <div class="products-inner-below_price">$35.00</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="products-inner-below_content">
+            <div class="products-inner-below_border">
+              <img src="images/img15.png" alt="" class="products-inner-below_img" />
+            </div>
+            <div class="products-inner-below_suborder">
+              <div class="products-inner-below_subcontent">
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <p>(0 reviews )</p>
+              </div>
+              <p class="products-inner-below-suborder_text">decor for drowing</p>
+              <div class="products-inner-below_subcontent">
+                <div class="products-inner-below_price">$50.00</div>
+                <div class="products-inner-below_price">$35.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+
+  <!-- SIMPLE -->
+
+  <section class="simple">
+    <div class="simple-background_blocks"></div>
+    <img src="images/img16.png" class="simple-background_blocks" />
+    <div class="container">
+      <div class="simple-inner">
+        <div class="simple-inner_content">
+          <h3 class="simple-title">Modernliving quarters</h3>
+          <p class="simple-paragraph">lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            in maximus odio eu elementum fringilla, Mauris sodales 
+            vel ipsum a laoreet.</p>
+          <p class="simple-paragraph">lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            in maximus odio eu elementum fringilla, Mauris sodales 
+            vel ipsum a laoreet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMPLE -->
+
+  <!-- NEWS -->
+
+  <section class="products news">
+    <div class="container">
+      <div class="products-inner">
+        <div class="products-inner-upper_block">
+          <h2 class="products_title">latest news</h2>
+          <p class="products_subtitle">Praesent ut ligula non mi curabitur at lacus elit</p>
+          <span class="products-inner-upper_line"></span>
+        </div>
+        <div class="news-inner-below_block">
+          <div class="news-inner-below_content">
+            <div class="news-inner-below_border">
+              <img src="images/img17.png" alt="">
+            </div>
+            <div class="news-inner-below_suborder">
+              <img src="images/img-photo.png" alt="" />
+              <p>posted may 9 2020</p>
+              <h2>here will your title</h2>
+              <p>Lorem ipsum is simply dummy text of the printing and typese...</p>
+              <span></span>
+              <span>read more</span>
+            </div>
+          </div>
+
+          <div class="news-inner-below_content">
+            <div class="news-inner-below_border">
+              <img src="images/img18.png" alt="">
+            </div>
+            <div class="news-inner-below_suborder">
+              <img src="images/img-photo.png" alt="" />
+              <p>posted may 9 2020</p>
+              <h2>here will your title</h2>
+              <p>Lorem ipsum is simply dummy text of the printing and typese...</p>
+              <span></span>
+              <span>read more</span>
+            </div>
+          </div>
+
+          <div class="news-inner-below_content">
+            <div class="news-inner-below_border">
+              <img src="images/img19.png" alt="">
+            </div>
+            <div class="news-inner-below_suborder">
+              <img src="images/img-photo.png" alt="" />
+              <p>posted may 9 2020</p>
+              <h2>here will your title</h2>
+              <p>Lorem ipsum is simply dummy text of the printing and typese...</p>
+              <span></span>
+              <span>read more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+
+  <!-- COMMENT -->
+
+  <section class="comment">
+    <div class="container">
+      <div class="products-inner">
+        <div class="products-inner-upper_block">
+          <h2 class="products_title">latest news</h2>
+          <p class="products_subtitle">Praesent ut ligula non mi curabitur at lacus elit</p>
+          <span class="products-inner-upper_line"></span>
+        </div>
+        <div class="comment-inner-below_block">
+          <div class="comment-inner-below_content absolute">
+            <div class="comment-inner-below-content_border">
+              <img src="images/comment.png" alt="">
+              <p class="comment-inner-below-content_paragraph">
+                It is a long established fact that a reader will be distracted 
+                by the readable content of a page when looking at its layout.
+              </p>
+              <img src="images/img-photo2.png" alt="" class="comment-inner-below-content_icon">
+            </div>
+          </div>
+
+          <div class="comment-inner-below_content">
+            <div class="comment-inner-below-content_border">
+              <img src="images/comment-g.png" alt="">
+              <p class="comment-inner-below-content_paragraph">
+                It is a long established fact that a reader will be distracted 
+                by the readable content of a page when looking at its layout.
+              </p>
+              <img src="images/img-photo2.png" alt="" class="comment-inner-below-content_icon">
+            </div>
+          </div>
+
+          <div class="comment-inner-below_content">
+            <div class="comment-inner-below-content_border">
+              <img src="images/comment-g.png" alt="">
+              <p class="comment-inner-below-content_paragraph">
+                It is a long established fact that a reader will be distracted 
+                by the readable content of a page when looking at its layout.
+              </p>
+              <img src="images/img-photo2.png" alt="" class="comment-inner-below-content_icon">
+            </div>
+          </div>
+        </div>
+        <div class="comment-inner-below-small_blocks">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT -->
+
+  <!-- SUBSCRIBE -->
+
+  <section class="subscribe">
+    <div class="container">
+      <div class="products-inner">
+        <div class="products-inner-upper_block">
+          <h2 class="products_title">newsletter</h2>
+          <p class="products_subtitle">Praesent ut ligula non mi curabitur at lacus elit</p>
+          <span class="products-inner-upper_line"></span>
+        </div>
+        <div class="subscribe-inner-below_block">
+          <div class="subscribe-inner-below_hover"></div>
+          <div class="subscribe-inner-below_hover"></div>
+          <div class="subscribe-inner-below_border first">
+            <div class="subscribe-inner-below_leftside"></div>
+          </div>
+          <div class="subscribe-inner-below_border second">
+            <div class="subscribe-inner-below_rightside">subscribe</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE -->
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <div class="footer-upper">
+      <div class="container">
+        <div class="footer-upper-inner">
+          <div class="footer-upper-inner_block">
+            <img src="images/footer-logo.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing e
+              lit. Velit ducimus voluptatibus neque illo id repellat 
+              quisquam? Autem expedita earum quae laborum 
+              ipsum ad.</p>
+            <span class="icons">
+              <i class="fab fa-google-plus-g"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-facebook-f"></i>
+            </span>
+          </div>
+          <div class="footer-upper-inner-second">
+            <div class="footer-upper-inner-second_block">
+              <h3>contact us</h3>
+              <div>
+                <p>1203, Dhanmondi, Drive FL 3344</p>
+                <p>Bangladesh, Dhaka</p>
+                <p>Phone: 0123 456 789</p>
+                <p>Email: Info@example.com</p>
+              </div>
+            </div>
+            <div class="footer-upper-inner-second_block">
+              <h3>recent post</h3>
+              <div>
+                <p>Best caring doctors</p>
+                <p>The blood sample</p>
+                <p>The ent sociealist</p>
+              </div>
+            </div>
+            <div class="footer-upper-inner-second_block">
+              <h3>our portfolio</h3>
+              <div>
+                <p>Plaster machine</p>
+                <p>Celsius Meter</p>
+                <p>Pedometer</p>
+                <p>Smart Mask</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-below">
+      <div class="container">
+        <div class="footer-below-inner">
+          <div class="footer-below-inner_block">
+            <p>© Copyright GymEdge 2020. All Right Reserved. Designed and Developed by Kawsar Ahmed</p>
+          </div>
+          <div class="footer-below-inner_block">
+            <img src="images/card1.png" alt="">
+            <img src="images/card2.png" alt="">
+            <img src="images/card3.png" alt="">
+            <img src="images/card4.png" alt="">
+            <img src="images/card5.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FOOTER -->
+
+  <script src="Javascript/Javascript.js"></script>
 </body>
-
 </html>

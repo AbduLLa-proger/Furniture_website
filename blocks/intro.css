@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+.intro {
+  width: 100%;
+  padding-top: 4.7vw;
+  margin: 0 auto;
+}
+
+.intro-background {
+  position: relative;
+  background-color: #f9f3eb;
+  height: 41vw;
+}
+
+.intro-background_img {
+  position: absolute;
+  right: 0;
+  width: 45vw;
+  height: 41vw;
+}
+
+.intro-background_img img:first-child {
+  width: 45vw;
+  position: absolute;
+  right: 0;
+  top: 2vw;
+}
+
+.intro-background_img img:last-child {
+  width: 38vw;
+  position: absolute;
+  right: 2vw;
+  top: 12vw;
+}
+
+.intro-background-img_shape {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+}
+
+.intro-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 47vw;
+}
+
+.intro-inner_block {
+  width: 55%;
+}
+
+.intro-inner_text {
+  font-family: "Poppins", sans-serif;
+  font-size: 4.1vw;
+  font-weight: 700;
+  color: #2d3436;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+.intro-inner_paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.199vw;
+  font-weight: 400;
+  color: #222222;
+  text-transform: unset;
+  margin: 3.5vw 0;
+  padding-right: 5vw;
+  line-height: 1.5;
+}
+
+.intro-inner span {
+  text-transform: lowercase;
+}
+
+.intro-inner_button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7vw;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  padding: .1vw 2vw;
+  background: #ef8b59;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.intro-inner_button:hover {
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  background: transparent;
+  color: #ef8b59;
+}

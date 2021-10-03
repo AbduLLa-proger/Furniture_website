@@ -1,0 +1,187 @@
+@import 'vars';
+@import 'mixin';
+
+.footer {
+  height: 30vw;
+  @include display(flex, column, center, center);
+  width: 100%;
+  &-upper {
+    @include display(flex, column, center, center);
+    background-color: $color6;
+    height: 85%;
+    width: inherit;
+    &-inner {
+      @include display(flex, row, space-between, center);
+      height: inherit;
+      &_block {
+        width: 40%;
+        & img {
+          width: 11vw;
+        }
+        & p {
+          @include font($font3, 1vw, 500, $color5, unset);
+          padding-right: 4vw;
+          line-height: 2;
+          margin-top: 1.5vw;
+          margin-bottom: 1.5vw;
+        }
+      
+        & .icons {
+          @include display(flex, row, space-between, center);
+          width: 22%;
+          height: 3vw;
+          & i {
+            color: $color5;
+            font-size: .7vw;
+            border: 1px solid $color5;
+            padding: .3vw;
+            cursor: pointer;
+            @include transition(.3s, color);
+            &:hover {
+              color: white;
+              background-color: $color5;
+              @include transition(.3s, color);
+            }
+          }
+        }
+      }
+      &-second {
+        @include display(flex, row, space-between, center);
+        width: 60%;
+        &_block {
+          @include display(flex, column, center, flex-start);
+          &:first-of-type {
+            width: 40%;
+            padding-left: 1%;
+            & div {
+              margin-top: 2vw;
+              margin-bottom: 2.2vw;
+              & p {
+                margin-bottom: 1vw;
+              }
+              & p:first-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            width: 30%;
+            padding-left: 7%;
+            & div {
+              margin-bottom: 3.8vw;
+              margin-top: 2.2vw;
+              & p {
+                margin-bottom: 1vw;
+              }
+            }
+          }
+          &:last-of-type {
+            width: 30%;
+            padding-left: 12%;
+            & div {
+              margin-bottom: 2.7vw;
+              margin-top: 2.3vw;
+              & p {
+                margin-bottom: 1vw;
+              }
+              & p:first-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        & h3 {
+          @include font($font2, 1.3vw, 700, $color5, capitalize);
+        }
+        & p {
+          @include font($font3, 1vw, 500, $color5, unset);
+        }
+      }
+    }
+  }
+  &-below {
+    @include display(flex, column, center, center);
+    background-color: $color5;
+    height: 15%;
+    width: inherit;
+    &-inner {
+      height: inherit;
+      width: inherit;
+      @include display(flex, row, space-between, center);
+      &_block {
+        @include display(flex, row, space-between, center);
+        height: inherit;
+        width: 75%;
+        & p {
+          @include font($font1, 1.06vw, 500, white, capitalize);
+        }
+        & img {
+          width: 3.5vw;
+          height: 2vw;
+        }
+        &:last-of-type {
+          width: 25%;
+        }
+      }
+    }
+  }
+}
+  
+
+@media (max-width: 500px) {
+  .footer {
+    height: 56vw;
+    &-upper {
+      height: 94%;
+      & .container {
+        height: 100%;
+      }
+      &-inner {
+        @include display(flex, column, space-evenly, center);
+        &_block {
+          width: 100%;
+          & img {
+            width: 16vw;
+          }
+          & p {
+            font-size: 1.8vw;
+            line-height: 1.8;
+            padding-right: 0;
+          }
+          & .icons {
+            width: 13%;
+          }
+          & .icons i {
+            font-size: 1.5vw;
+          }
+        }
+        &-second {
+          width: 100%;
+          &_block {
+            &:first-of-type {
+              padding-left: 0;
+              width: 33%;
+            }
+            &:nth-of-type(2) {
+              padding-left: 11%;
+              width: 33%;
+            }
+            &:last-of-type {
+              width: 33%;
+              padding-left: 17%;
+            }
+            & h3 {
+              font-size: 2vw;
+            }
+            & div p {
+              font-size: 1.4vw;
+            }
+          }
+        }
+      }
+    }
+    &-below {
+      height: 6%;
+    }
+  }
+}

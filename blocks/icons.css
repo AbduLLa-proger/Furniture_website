@@ -115,6 +115,14 @@
   content: "\10f078";
 }
 
+.fa-chevron-right:before {
+  content: "\f054";
+}
+
+.fad.fa-chevron-right:after {
+  content: "\10f054";
+}
+
 .fa-user:before {
   content: "\f007";
 }

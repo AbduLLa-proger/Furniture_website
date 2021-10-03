@@ -1,0 +1,121 @@
+@import 'vars';
+@import 'mixin';
+.news {
+  height: 55vw;
+}
+
+.news-inner-below {
+  &_block {
+    @include grid(grid, 3, space-between);
+    margin-top: 3vw;
+    width: 100%;
+  }
+  &_content {
+    @include display(flex, column, center, center);
+    width: 25.6vw;
+    position: relative;
+  }
+  &_border {
+    height: 16.5vw;
+    width: 100%;
+    & img {
+      width: inherit;
+    }
+  }
+  &_suborder {
+    @include display(flex, column, center, unset);
+    padding-top: 3vw;
+    padding-left: 2vw;
+    padding-bottom: 2vw;
+    background: white;
+    & img {
+      position: absolute;
+      width: 4vw;
+      left: 2vw;
+      top: 14.5vw;
+    }
+    & h2 {
+      @include font($font3, 1.65vw, 600, $color5, uppercase);
+      margin-top: 2vw;
+      margin-bottom: 1vw;
+    }
+    & p {
+      &:first-of-type {
+        @include font($font2, 1.1vw, 400, $color2, capitalize);
+      }
+      &:last-of-type {
+        @include font($font2, 1vw, 500, $color2, unset);
+      }
+    }
+    & span:first-of-type {
+      position: absolute;
+      width: 100%;
+      height: .1px;
+      background: $color3;
+      left: 0;
+      bottom: 13%;
+    }
+    & span:last-of-type {
+      @include font($font2, 1.1vw, 600, red, uppercase);
+      margin-top: 3vw;
+    }
+  }
+
+}
+
+.news-line_border {
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .news {
+    height: 255vw;
+    &-inner-below {
+      &_block {
+        grid-template-columns: auto;
+        justify-content: center;
+        margin-top: 6vw;
+      }
+      &_content {
+        width: 55vw;
+        margin-bottom: 5vw;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      &_border {
+        height: auto;
+      }
+      &_suborder {
+        padding-top: 6vw;
+        padding-left: 4vw;
+        width: inherit;
+        & img {
+          width: 9vw;
+          left: 3vw;
+          top: 30.5vw;
+        }
+        & p:first-of-type {
+          font-size: 2.3vw;
+        }
+        & h2 {
+          font-size: 3.5vw;
+        }
+        & p:last-of-type {
+          font-size: 2.45vw;
+        }
+        & span:first-of-type {
+          height: 2.1px;
+          bottom: 11%;
+        }
+        & span:last-of-type {
+          font-size: 2.2vw;
+          font-weight: 700;
+          margin-top: 6vw;
+        }
+      }
+    }
+  }
+
+}

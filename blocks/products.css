@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+.products {
+  height: 50vw;
+}
+
+.products-inner {
+  padding-top: 8vw;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-inner-upper_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.products-inner-upper_line {
+  width: 4vw;
+  height: .1vw;
+  background: #a3a3a3;
+}
+
+.products-inner-below_block {
+  width: inherit;
+  margin-top: 5vw;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+}
+
+.products-inner-below_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18.5vw;
+}
+
+.products-inner-below_border {
+  position: relative;
+  width: inherit;
+  z-index: 100;
+}
+
+.products-inner-below_border img {
+  width: inherit;
+}
+
+.products-inner-below_border span {
+  position: absolute;
+  top: .5vw;
+  right: .5vw;
+  padding: .2vw 1vw;
+  background: #ef8b59;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.products-inner-below_suborder {
+  padding-left: 1.5vw;
+  padding-top: 1.5vw;
+  width: inherit;
+  background: white;
+  height: 9vw;
+  border-radius: 10px;
+  position: relative;
+  bottom: 1vw;
+}
+
+.products-inner-below-suborder_text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 600;
+  color: #222222;
+  text-transform: capitalize;
+  margin: .8vw 0;
+}
+
+.products-inner-below_subcontent {
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: center;
+}
+
+.products-inner-below_subcontent:first-child {
+  margin-top: .5vw;
+}
+
+.products-inner-below_subcontent span {
+  margin-right: 1vw;
+}
+
+.products-inner-below_subcontent span i {
+  color: #f1f1f1;
+  font-size: .9vw;
+}
+
+.products-inner-below_subcontent p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 400;
+  color: #a3a3a3;
+  text-transform: capitalize;
+}
+
+.products-inner-below_price {
+  margin-right: 1vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #a3a3a3;
+  text-transform: capitalize;
+  border-bottom: solid 1px;
+}
+
+.products-inner-below_price:last-child {
+  color: #ef8b59;
+  border-bottom: none;
+}
+
+.products_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2vw;
+  font-weight: 600;
+  color: #222222;
+  text-transform: capitalize;
+  margin-bottom: .5vw;
+}
+
+.products_subtitle {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4vw;
+  font-weight: 400;
+  color: #a3a3a3;
+  text-transform: unset;
+  margin-bottom: 1.5vw;
+}
+
+.features {
+  height: 55vw;
+}
+
+@media (max-width: 780px) {
+  .products {
+    height: 125vw;
+  }
+  .products_title {
+    font-size: 3vw;
+  }
+  .products_subtitle {
+    font-size: 2vw;
+    margin-bottom: 2.5vw;
+  }
+  .products-inner-upper_line {
+    width: 5vw;
+    height: .3vw;
+  }
+  .products-inner-below_block {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    width: 72vw;
+  }
+  .products-inner-below_content {
+    width: 34.5vw;
+  }
+  .products-inner-below_content:first-of-type {
+    margin-bottom: 3vw;
+  }
+  .products-inner-below_content:nth-of-type(2) {
+    margin-bottom: 3vw;
+  }
+  .products-inner-below_border span {
+    font-size: 2vw;
+    top: 1vw;
+    right: 1vw;
+    padding: 0.5vw 1.6vw;
+  }
+  .products-inner-below_suborder {
+    height: 15vw;
+  }
+  .products-inner-below-suborder_text {
+    font-size: 2.3vw;
+    margin: 1.5vw 0;
+  }
+  .products-inner-below_subcontent span i {
+    font-size: 1.9vw;
+  }
+  .products-inner-below_subcontent p {
+    font-size: 2.1vw;
+  }
+  .products-inner-below_price {
+    font-size: 2.2vw;
+  }
+  .features {
+    height: 130vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .products-inner-upper_line {
+    height: .4vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .products {
+    height: 365vw;
+  }
+  .products-inner-below_block {
+    grid-template-columns: auto;
+    justify-content: center;
+    margin-top: 7vw;
+  }
+  .products-inner-below_content {
+    width: 53.5vw;
+    margin-bottom: 5vw;
+  }
+  .products-inner-below_content:first-of-type, .products-inner-below_content:nth-of-type(2) {
+    margin-top: 0vw;
+    margin-bottom: 10vw;
+  }
+  .products-inner-below_content:last-of-type {
+    margin-top: 5vw;
+  }
+  .products-inner-below_border span {
+    top: 1.8vw;
+    right: 1.8vw;
+    font-size: 2.8vw;
+    padding: .9vw 2.5vw;
+  }
+  .products-inner-below_suborder {
+    height: 25vw;
+    padding-left: 3.5vw;
+  }
+  .products-inner-below_subcontent:first-of-type {
+    margin-top: 1.5vw;
+  }
+  .products-inner-below_subcontent span i {
+    font-size: 2.7vw;
+  }
+  .products-inner-below_subcontent p {
+    font-size: 3.4vw;
+  }
+  .products-inner-below-suborder_text {
+    font-size: 3.4vw;
+    margin: 3vw 0;
+  }
+  .products-inner-below_price {
+    font-size: 3.3vw;
+    margin-right: 3vw;
+  }
+  .products-inner-upper_line {
+    margin-top: 2vw;
+    width: 8vw;
+  }
+  .products_title {
+    font-size: 4vw;
+  }
+  .products_subtitle {
+    font-size: 2.65vw;
+  }
+  .features {
+    height: 375vw;
+  }
+}

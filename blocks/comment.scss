@@ -1,0 +1,120 @@
+@import 'vars';
+@import 'mixin';
+
+.comment {
+  height: 62vw;
+}
+
+.comment-inner-below {
+  &_block {
+    @include display(flex, row, space-between, center);
+    position: relative;
+    width: inherit;
+    margin-top: 4vw;
+  }
+  &_content {
+    @include display(flex, column, center, center);
+    width: 34vw;
+    height: 20vw;
+    margin-top: 11vw;
+    box-shadow: 0 0 20px -10px black;
+  }
+  &-content {
+    &_border {
+      @include display(flex, column, center, center);
+      @include border(5px);
+      width: inherit;
+      height: inherit;
+      position: relative;
+      background-color: white;
+      & img:first-of-type {
+        width: 5vw;
+      }
+      & img:last-of-type {
+        position: absolute;
+        width: 9vw;
+        top: 83%
+      }
+    }
+    &_paragraph {
+      @include font($font1, 1.7vw, 400, $color3, unset);
+      text-align: center;
+      margin-bottom: 2.5vw;
+      margin-top: 1vw;
+      padding: 0 2vw;
+    }
+  }
+  &-small_blocks {
+    @include display(flex, row, space-between, center);
+    margin-top: 10vw;
+    width: 13vw;
+    & span {
+      width: 3vw;
+      height: 1.2vw;
+      background: $color1;
+      &:nth-of-type(2) {
+        opacity: .8;
+      }
+      &:last-of-type {
+        opacity: .5;
+      }
+    }
+  }
+
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  right: 25.5%;
+  margin-top: 0;
+  z-index: 100;
+  & > div {
+    background-color: $color1;
+    & p {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .comment {
+    height: 161vw;
+    &-inner-below {
+      &_block {
+        flex-direction: column;
+      }
+      &_content {
+        width: 55vw;
+        height: 33vw;
+      }
+      &-content {
+        &_border img:first-of-type {
+          width: 8vw;
+        }
+        &_border img:last-of-type {
+          width: 15vw;
+        }
+        &_paragraph {
+          font-size: 2.5vw;
+          margin-top: 2vw;
+          margin-bottom: 5.5vw;
+          padding-left: 3vw;
+          padding-right: 3vw;
+        }
+      }
+      &-small_blocks {
+        margin-top: 14vw;
+      }
+    }
+  }
+  .absolute {
+    position: unset;
+  }
+}
+
+@media (max-width: 500px) {
+  .comment {
+    height: 168vw;
+  }
+}

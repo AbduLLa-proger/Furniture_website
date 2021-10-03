@@ -1,0 +1,269 @@
+@import 'mixin';
+@import 'vars';
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  &-text {
+    @include font($font1, 1vw, 600, white, capitalize);
+    padding: 0 2vw;
+    padding-right: 3vw
+  }
+  &-inner {
+    @include display(flex, row, space-between, unset);
+    width: 100%;
+    &_block {
+      @include display(flex, row, space-between, center);
+      & i {
+        font-size: 1.2vw;
+      }
+      &:first-child {
+        background-color: $color1;
+        justify-content: center;
+        width: 15vw;
+        height: 4.7vw;
+        position: relative;
+        & .fas {
+          font-size: 1vw;
+          color: white;
+          cursor: pointer;
+          position: absolute;
+          @include transition(0.5s, font-size);
+          &:hover {
+            font-size: 1.5vw;
+            @include transition(0.5s, font-size);
+          }
+        }
+        & .fa-bars {
+          left: 1.5vw;
+        }
+        & .fa-arrow-circle-down {
+          right: 1.5vw;
+        }
+      }
+      &:nth-child(2) {
+        margin-right: 2vw;
+        & span:first-of-type i:last-of-type,
+        & span:nth-of-type(2) i:last-of-type,
+        & span:nth-of-type(3) i:last-of-type,
+        & span:nth-of-type(4) i:last-of-type {
+          @include transition(.3s, transform);
+        }
+        & span:nth-of-type(2) {
+          & i:first-child {
+          width: 8vw;
+          right: 6%;
+          }
+          & :last-of-type {
+            right: 9%;
+          }
+          & .burger {
+            left: 19%;
+          }
+        }
+        & span:nth-of-type(4) .burger {
+          left: 25%;
+        }
+      }
+      &:last-child {
+        margin-right: 4vw
+      }
+      & span {
+        @include display(flex, row, space-between, center);
+        position: relative;
+        &:last-child p {
+          padding: 0
+        }
+        & p {
+          @include font($font1, 1vw, 500, $color5, uppercase);
+        }
+      }
+      & span i {
+        &:first-child {
+          width: 6vw;
+          height: 1vw;
+          cursor: pointer;
+          z-index: 500;
+          &:hover ~ p,
+          &:hover ~ .fas {
+            color: $color1
+          }
+        }
+        position: absolute;
+        right: 15%;
+      }
+      &:last-child i {
+        cursor: pointer;
+        &:hover {
+          color: $color1;
+        }
+        &:first-child {
+          margin-right: 3vw;
+        }
+      }
+    }
+  }
+  &-focus_text,
+  &-chevron_down {
+    color: $color1 !important;
+  }
+}
+
+.burger {
+  position: absolute;
+  top: 100%;
+  left: 24.5%;
+  height: 5vw;
+  width: 7vw;
+  overflow: hidden;
+  @include font($font1, 1vw, 500, $color5, unset);
+  @include transition(.3s, height);
+  &-hide {
+    height: 0;
+    @include transition(.3s, height);
+  }
+  &-transform {
+    @include transform(180deg);
+    @include transition(.3s, transform);
+  } 
+  & p {
+    cursor: pointer;
+    width: fit-content;
+    &:hover {
+      cursor: pointer;
+      color: $color1;
+      @include transition(.3s, color);
+    }
+  }
+}
+
+.bars {
+  position: absolute;
+  z-index: 100;
+  width: 0vw;
+  height: 19vw;
+  top: 4.5vw;
+  left: 0;
+  background-color: $color1;
+  padding: 2vw 0;
+  overflow: hidden;
+  @include display(flex, column, space-between, flex-start);
+  @include transition(.3s, width);
+  & span  {
+    & .header-text {
+      padding-left: 1vw !important;
+      // padding-right: 3vw !important;
+      color: white;
+    }
+    & i:first-of-type:hover {
+      & + p {
+        color: white;
+      }
+      & ~ i {
+        color: white !important;
+      }
+    }
+  }
+  & span i {
+    bottom: 0;
+    left: 55%;
+  }
+  &-burger {
+    position: absolute;
+    display: flex;
+    left: 7vw;
+    top: -10%;
+    width: 5vw;
+    height: 8vw;
+    background-color: $color1;
+    opacity: 0;
+    @include display(flex, column, space-evenly, center);
+    & p {
+      cursor: pointer;
+      color: white !important;
+      padding: .2vw 0 !important;
+      &:first-of-type {
+        padding-top: 0 !important;
+      }
+      &:last-of-type {
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+  &-container {
+    width: 70%;
+    height: 10%;
+    position: relative;
+    & span { left: 0; @include transition(.3s, left); }
+    & span i:first-of-type {
+      width: 7.5vw;
+      left: 0;
+    }
+    &:nth-of-type(2) span {
+      & i:last-of-type {
+        left: 80%;
+      }
+      & i:first-of-type {
+        width: 9vw;
+      }
+      & .bars-burger {
+        left: 9vw;
+      }
+
+    }
+    & span:first-of-type i:last-of-type,
+    & span:nth-of-type(2) i:last-of-type,
+    & span:nth-of-type(3) i:last-of-type,
+    & span:last-of-type i:last-of-type {
+      width: fit-content;
+      @include transition(.3s, transform);
+    }
+  }
+  &_transform {
+    bottom: auto !important;
+    @include transform(180deg);
+    @include transition(.3s, transform);
+  }
+  &-text {
+    padding-left: 1vw !important;
+    color: white !important;
+  }
+  &_move {
+    left: 8vw !important;
+    @include transition(1s, left);
+  }
+  &_move1 {
+    left: 6vw !important;
+    @include transition(.3s, left);
+  }
+  &_transform {
+    @include transform(180deg);
+    @include transition(.3s, transform);
+  }
+  &-show {
+    width: 15vw;
+    overflow: visible;
+    @include transition(.3s, width);
+  }
+}
+
+@media (max-width: 500px) {
+  .header-inner {
+    justify-content: flex-start;
+    &_block {
+      &:first-of-type {
+        margin-right: 2vw;
+        & .fas,
+        & p {
+          font-size: 1.2vw;
+        }
+      }
+      &:nth-of-type(2) {
+        display: none;
+      }
+    }
+  }
+}
